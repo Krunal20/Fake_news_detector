@@ -87,7 +87,7 @@ from sklearn.model_selection import train_test_split
 tf = TfidfVectorizer(ngram_range = (1,3), min_df = 5)
 xset = data.xdata
 yset = data.REAL
-xtrain, xtest, ytrain, ytest = train_test_split(xset, yset, test_size=0.33, random_state = 123)
+xtrain, xtest, ytrain, ytest = train_test_split(xset, yset, test_size=0.33, random_state = 232)
 
 
 
@@ -101,7 +101,7 @@ xtesttf = tf.transform(xtest.values.astype(str))
 
 #initializing and training model
 from sklearn.linear_model import PassiveAggressiveClassifier
-pac = PassiveAggressiveClassifier(random_state = 79).fit(xtraintf,ytrain)
+pac = PassiveAggressiveClassifier(random_state = 232).fit(xtraintf,ytrain)
 
 
 
